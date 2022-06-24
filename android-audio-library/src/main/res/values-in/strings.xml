@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s gratis</string>
+    <string name="title_left">%1$s tersisa</string>
+    <string name="db">dB</string>
+    <string name="no">Tidak</string>
+    <string name="yes">Ya</string>
+    <string name="delete_recording">Hapus Rekaman</string>
+    <string name="rename_recording">Ganti Nama Rekaman</string>
+    <string name="file_not_found">Berkas tidak ditemukan</string>
+    <string name="menu_rename">Ganti nama</string>
+    <string name="menu_delete">Menghapus</string>
+    <string name="tolbar_all">Semua</string>
+    <string name="tolbar_stars">bintang</string>
+    <string name="tolbar_sort_name">Nama</string>
+    <string name="tolbar_sort_date">Tanggal</string>
+    <string name="starred">Berbintang</string>
+    <string name="not_starred">Tidak berbintang</string>
+    <string name="pause_button">Berhenti sebentar</string>
+    <string name="play_button">Bermain</string>
+    <string name="edit_button">Sunting</string>
+    <string name="share_button">Membagikan</string>
+    <string name="trash_button">Menghapus</string>
+    <string name="recording_volume_text">(Penguatan perangkat lunak. Gunakan di atas 100% hanya jika Anda memiliki masalah perangkat keras)</string>
+    <string name="sort_by">&#160;&#160;Urutkan Berdasarkan…</string>
+    <string name="sort_by_name_a_z">Nama A-Z</string>
+    <string name="sort_by_name_z_a">Nama Z-A</string>
+    <string name="sort_by_date_ask">Tanggal Asc</string>
+    <string name="sort_by_date_desc">Tanggal Desc</string>
+    <string name="all">Semua</string>
+    <string name="star">Bintang</string>
+    <string name="delete_recording_confirm">Apakah Anda yakin akan menghapus file ini?</string>
+    <string name="ok">Oke</string>
+    <string name="cancel">Membatalkan</string>
+    <string name="reset">Mengatur ulang</string>
+    <string name="cut">Memotong</string>
+    <string name="trim_audio">pangkas audio</string>
+    <string name="save_audio_as">Nama</string>
+    <string name="trim_sec_alert">Panjang pemangkasan harus lebih besar dari 0</string>
+    <string name="saved_to">Disimpan ke</string>
+    <string name="override_file">File sudah ada.\nApakah Anda ingin menggantinya?</string>
+    <string name="saving_recorder_folder">Perekam suara</string>
+    <string name="save_audio_failed">Gagal menyimpan file ke penyimpanan</string>
+    <string name="processing">Pengolahan....</string>
+</resources>

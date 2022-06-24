@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">％1$s無料</string>
+    <string name="title_left">残り％1 $ s</string>
+    <string name="db">dB</string>
+    <string name="no">いいえ</string>
+    <string name="yes">はい</string>
+    <string name="delete_recording">録音を削除する</string>
+    <string name="rename_recording">録音の名前を変更</string>
+    <string name="file_not_found">ファイルが見つかりません</string>
+    <string name="menu_rename">名前を変更</string>
+    <string name="menu_delete">消去</string>
+    <string name="tolbar_all">全て</string>
+    <string name="tolbar_stars">出演者</string>
+    <string name="tolbar_sort_name">名前</string>
+    <string name="tolbar_sort_date">日にち</string>
+    <string name="starred">スター付き</string>
+    <string name="not_starred">スターなし</string>
+    <string name="pause_button">一時停止</string>
+    <string name="play_button">遊ぶ</string>
+    <string name="edit_button">編集</string>
+    <string name="share_button">シェア</string>
+    <string name="trash_button">消去</string>
+    <string name="recording_volume_text">（ソフトウェアゲイン。ハードウェアに問題がある場合にのみ100％以上を使用してください）</string>
+    <string name="sort_by">＆＃160;＆＃160;並べ替え…</string>
+    <string name="sort_by_name_a_z">名前A-Z</string>
+    <string name="sort_by_name_z_a">名前Z-A</string>
+    <string name="sort_by_date_ask">日付昇順</string>
+    <string name="sort_by_date_desc">日付説明</string>
+    <string name="all">全て</string>
+    <string name="star">星</string>
+    <string name="delete_recording_confirm">このファイルを削除してもよろしいですか？</string>
+    <string name="ok">わかった</string>
+    <string name="cancel">キャンセル</string>
+    <string name="reset">リセット</string>
+    <string name="cut">切る</string>
+    <string name="trim_audio">トリムオーディオ</string>
+    <string name="save_audio_as">名前</string>
+    <string name="trim_sec_alert">トリミングの長さは0より大きくする必要があります</string>
+    <string name="saved_to">保存先</string>
+    <string name="override_file">ファイルは既に存在します。\n置き換えますか？</string>
+    <string name="saving_recorder_folder">ボイスレコーダー</string>
+    <string name="save_audio_failed">ファイルをストレージに保存できませんでした</string>
+    <string name="processing">処理....</string>
+</resources>

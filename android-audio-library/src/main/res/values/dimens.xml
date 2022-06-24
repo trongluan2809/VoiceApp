@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="layout_corner_radius">36dp</dimen>
+    <dimen name="margin_bottom_btn">24dp</dimen>
+</resources>

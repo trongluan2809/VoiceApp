@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s मुफ़्त</string>
+    <string name="title_left">%1$s शेष</string>
+    <string name="db">डीबी</string>
+    <string name="no">नहीं</string>
+    <string name="yes">हाँ</string>
+    <string name="delete_recording">रिकॉर्डिंग हटाएं</string>
+    <string name="rename_recording">रिकॉर्डिंग का नाम बदलें</string>
+    <string name="file_not_found">फाइल नहीं मिली</string>
+    <string name="menu_rename">नाम बदलें</string>
+    <string name="menu_delete">मिटाना</string>
+    <string name="tolbar_all">सभी</string>
+    <string name="tolbar_stars">सितारे</string>
+    <string name="tolbar_sort_name">नाम</string>
+    <string name="tolbar_sort_date">दिनांक</string>
+    <string name="starred">तारांकित</string>
+    <string name="not_starred">तारांकित नहीं</string>
+    <string name="pause_button">रोकना</string>
+    <string name="play_button">खेलें</string>
+    <string name="edit_button">संपादन करना</string>
+    <string name="share_button">शेयर करना</string>
+    <string name="trash_button">मिटाना</string>
+    <string name="recording_volume_text">(सॉफ्टवेयर लाभ। 100% से ऊपर का उपयोग केवल तभी करें जब आपके पास हार्डवेयर समस्याएँ हों)</string>
+    <string name="sort_by">&#160;&#160;क्रमबद्ध करें…</string>
+    <string name="sort_by_name_a_z">नाम ए-जेड</string>
+    <string name="sort_by_name_z_a">नाम जेड-ए</string>
+    <string name="sort_by_date_ask">दिनांक एएससी</string>
+    <string name="sort_by_date_desc">दिनांक विवरण</string>
+    <string name="all">सभी</string>
+    <string name="star">सितारा</string>
+    <string name="delete_recording_confirm">क्या आप वाकई इस फ़ाइल को हटाना चाहते हैं?</string>
+    <string name="ok">ठीक है</string>
+    <string name="cancel">रद्द करना</string>
+    <string name="reset">रीसेट</string>
+    <string name="cut">कट गया</string>
+    <string name="trim_audio">ट्रिम ऑडियो</string>
+    <string name="save_audio_as">नाम</string>
+    <string name="trim_sec_alert">ट्रिमिंग की लंबाई 0 . से अधिक होनी चाहिए</string>
+    <string name="saved_to">में सहेजा गया</string>
+    <string name="override_file">फ़ाइल पहले से मौजूद है.\nक्या आप इसे बदलना चाहते हैं?</string>
+    <string name="saving_recorder_folder">आवाज रिकॉर्डर</string>
+    <string name="save_audio_failed">फ़ाइल को संग्रहण में सहेजने में विफल</string>
+    <string name="processing">प्रसंस्करण ....</string>
+</resources>

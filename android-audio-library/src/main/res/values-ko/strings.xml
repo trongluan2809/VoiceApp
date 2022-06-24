@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s 무료</string>
+    <string name="title_left">%1$s 남음</string>
+    <string name="db">dB</string>
+    <string name="no">아니</string>
+    <string name="yes">예</string>
+    <string name="delete_recording">녹음 삭제</string>
+    <string name="rename_recording">녹음 이름 바꾸기</string>
+    <string name="file_not_found">파일을 찾을 수 없음</string>
+    <string name="menu_rename">이름 바꾸기</string>
+    <string name="menu_delete">삭제</string>
+    <string name="tolbar_all">모두</string>
+    <string name="tolbar_stars">별</string>
+    <string name="tolbar_sort_name">이름</string>
+    <string name="tolbar_sort_date">날짜</string>
+    <string name="starred">별표</string>
+    <string name="not_starred">별표 표시되지 않음</string>
+    <string name="pause_button">정지시키다</string>
+    <string name="play_button">놀다</string>
+    <string name="edit_button">편집하다</string>
+    <string name="share_button">공유하다</string>
+    <string name="trash_button">삭제</string>
+    <string name="recording_volume_text">(소프트웨어 이득. 하드웨어 문제가 있는 경우에만 100% 이상 사용)</string>
+    <string name="sort_by">&#160;&#160;정렬 기준…</string>
+    <string name="sort_by_name_a_z">이름 A-Z</string>
+    <string name="sort_by_name_z_a">이름 Z-A</string>
+    <string name="sort_by_date_ask">날짜 오름차순</string>
+    <string name="sort_by_date_desc">날짜 설명</string>
+    <string name="all">모두</string>
+    <string name="star">별</string>
+    <string name="delete_recording_confirm">이 파일을 삭제하시겠습니까?</string>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="reset">초기화</string>
+    <string name="cut">자르다</string>
+    <string name="trim_audio">오디오 트림</string>
+    <string name="save_audio_as">이름</string>
+    <string name="trim_sec_alert">자르기 길이는 0보다 커야 합니다.</string>
+    <string name="saved_to">저장 위치</string>
+    <string name="override_file">파일이 이미 있습니다.\n교체하시겠습니까?</string>
+    <string name="saving_recorder_folder">녹음기</string>
+    <string name="save_audio_failed">파일을 스토리지에 저장하지 못했습니다.</string>
+    <string name="processing">처리 중....</string>
+</resources>

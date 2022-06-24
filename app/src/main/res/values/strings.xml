@@ -1,0 +1,125 @@
+<resources>
+    <string-array name="sample_rate_text">
+        <item>48 kHz</item>
+        <item>44.1 kHz </item>
+        <item>32 kHz</item>
+        <item>22 kHz</item>
+        <item>16 kHz </item>
+        <item>11 kHz</item>
+        <item>8 kHz </item>
+    </string-array>
+
+    <string-array name="source_text">
+        <item>Mic</item>
+        <item>Unprocessed</item>
+        <item>Bluetooth</item>
+    </string-array>
+    <string-array name="channels_text">
+        <item>Mono (default)</item>
+        <item>Stereo</item>
+    </string-array>
+
+
+    <string name="app_name1">Voice Recorder</string>
+    <string name="app_name">Voice Recorder</string>
+    <string name="app_name2">Recorder</string>
+    <string name="hold_by_call">Pause (hold by call)</string>
+    <string name="recording_status_recording">Recording…</string>
+    <string name="recording_status_encoding">Encoding…</string>
+    <string name="recording_status_pause">Pause</string>
+    <string name="confirm_cancel">Confirm cancel</string>
+    <string name="encoding_title">Encoding…</string>
+    <string name="pause_title">Pause…</string>
+    <string name="recording_title">Recording</string>
+    <string name="open_recording_folder">Open Recording Folder</string>
+    <string name="recording_list_is_empty">Recording List is Empty\n\nClick Record to Start Recording</string>
+    <string name="record_button">Record</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="pause_button">Pause</string>
+    <string name="pref_storage_title"><b>Recordings Folder</b></string>
+    <string name="pref_rate_title"><b>Sample Rate</b></string>
+    <string name="pref_encoding_title"><b>Encoding</b></string>
+    <string name="pref_encoding_summary">Output file formats (.wav, .m4a, …)</string>
+    <string name="pref_mode_title"><b>Voice Channels</b></string>
+    <string name="pref_mode_summary"><b>Recording channels</b></string>
+    <string name="pref_nameformat_title"><b>Filename Format</b></string>
+    <string name="pref_pausecalls_title"><b>Pause During a Call</b></string>
+    <string name="pref_pausecalls_summary">Stop recording on answering and continue on hangup</string>
+    <string name="pref_fly_title"><b>Encoding on the Fly</b></string>
+    <string name="pref_silence_title"><b>Silent Mode</b></string>
+    <string name="pref_silence_summary">Enable \'silent mode\' during recording</string>
+    <string name="pref_lockscreen_title"><b>Lockscreen Controls</b></string>
+    <string name="pref_lockscreen_summary">Show the controls when the phone is locked</string>
+    <string name="pref_application"><b>APPLICATION</b></string>
+    <string name="pref_recordings"><b>RECORDINGS</b></string>
+    <string name="pref_fly_summary">Enabling encoding on the fly disables editing, and crash recovery</string>
+    <string name="hold_by_bluetooth">Pause (bluetooth disconnected)</string>
+    <string name="menu_search">&#160;&#160;Search</string>
+    <string name="save_as_wav">Save as WAV</string>
+    <string name="auto_close">Auto close in (%1$d)</string>
+    <string name="mic_muted_error">Mic muted</string>
+    <string name="mic_muted_pie">Android 9 (Pie) and above prevent idle background apps from using the microphone. Please disable SeLinux or downgrade to an earlier Android release!</string>
+    <string name="mic_paused">Mic was paused by Android, the recording time is shorter then the data recorded. Check if you device supports background recording or it is fast enough for the selected settings</string>
+    <string name="tile_start_recording">Start Recording</string>
+    <string name="tile_stop_recording">Stop Recording</string>
+    <string name="encoding_optimization">Background encoding paused due to android Battery Optimization settings, please allow this application work in background</string>
+    <string name="per_second">/s</string>
+    <string name="intro_1">High-Quality Recording</string>
+    <string name="intro_1_des">It allows you to record your  voice or any sound around you exactly</string>
+    <string name="intro_2">Trim Recording</string>
+    <string name="intro_2_des">You can edit your recording as trim audio or adjust volume easily</string>
+    <string name="intro_3">Star Section</string>
+    <string name="intro_3_des">Enable you to save your favorite recording files to search quickly</string>
+    <string name="version_name"><b>Version</b> 1.0.0</string>
+    <string name="action_about">&#160;&#160;About</string>
+    <string name="action_settings">&#160;&#160;Settings</string>
+    <string name="settings"><b>SETTINGS</b></string>
+    <string name="done_button">Done</string>
+    <string name="are_you_sure_2">Are you sure?</string>
+    <string name="confirm_done">Confirm Done</string>
+    <string name="action_feedback">FeedBack</string>
+    <string name="loading">Loading ...</string>
+    <string name="success">Success !!!</string>
+    <string name="saved_to_your_project">Saved to your project</string>
+    <string name="you_don_t_have_any_recording_files_yet_nhit_the_button_below_to_create_it_now">You don\'t have any recording files yet!\nHit the button below to create it now!!!</string>
+    <string name="start">Start:</string>
+    <string name="end">End:</string>
+    <string name="tell_us_function_you_want">Tell us function you want</string>
+    <string name="function_you_want">Function you want</string>
+    <string name="explain_more_detail_about_function">Explain more detail about function</string>
+    <string name="send_to_us">Send to us</string>
+    <string name="background_encoding_significantly_slowed_down_due_to_android_battery_optimization_settings_please_allow_this_application_work_in_background">Background encoding significantly slowed down due to android Battery Optimization settings, please allow this application work in background</string>
+    <string name="preview">Preview</string>
+    <string name="preparing">Preparing</string>
+    <string name="savings">Saving : </string>
+    <string name="saving">SAVING</string>
+    <string name="saved">SAVED</string>
+    <string name="language"><b>Language</b></string>
+    <string name="languageuper"><b>LANGUAGE</b></string>
+    <string name="languageb"><b>Language</b></string>
+    <string name="i_m_in">I’m in</string>
+    <string name="subLang">Choose the language you want</string>
+    <string name="notper">Not Permission</string>
+    <string name="per_granted">Permission Granted</string>
+    <string name="toast_per">Please grant all permissions to access additional functionality.</string>
+    <string name="go_to_setting">Go to setting</string>
+    <string name="all_superior_smart_features_are_ready_for_your_amazing_expreience">All superior smart features are ready for your amazing expreience.</string>
+    <string name="pref_source_title"><b>Recording Source</b></string>
+    <string name="pref_filters"><b>FILTERS</b></string>
+    <string name="pref_volume_title"><b>Recording Volume</b></string>
+    <string name="pref_voice_title"><b>Voice Filter</b></string>
+    <string name="pref_voice_summary">Bandpass Voice Filter</string>
+    <string name="pref_skip_title"><b>Skip Silence</b></string>
+    <string name="pref_skip_summary">Skip Silence while recording</string>
+    <string name="search_file">Search...</string>
+    <string name="i_miss_your_voice">I miss your voice !</string>
+    <string name="quit">Quit</string>
+    <string name="want_to_close_the_app">Want to close the app ?</string>
+
+
+    <!--ADS TEST-->
+    <string name="app_id">ca-app-pub-4973559944609228~2346710861</string>
+
+
+
+</resources>

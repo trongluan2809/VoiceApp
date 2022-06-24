@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.activities.RecordingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="@drawable/border_header_main"
+        android:translationZ="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MainToolbarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@color/transparent"
+            app:collapseIcon="@drawable/ic_back"
+            app:title="@string/app_name2"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="-36dp"
+        android:translationZ="10dp"
+        app:cardCornerRadius="@dimen/layout_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="36dp">
+
+            <TextView
+                android:id="@+id/txtAudioTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="2016-02-01.wav"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.voicerecorder.axet.audiolibrary.widgets.PitchView
+                android:id="@+id/recording_pitch"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="32dp"
+                app:cutColor="?attr/cutColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAudioTitle" />
+
+            <TextView
+                android:id="@+id/recording_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/preparing"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/recording_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recording_pitch" />
+
+            <ImageButton
+                android:id="@+id/recording_cancel"
+                style="@style/GradientFabCustom"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="32dp"
+                android:contentDescription="@string/cancel_button"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_exit" />
+
+            <ImageButton
+                android:id="@+id/recording_pause"
+                android:layout_width="@dimen/fab_size_normal"
+                android:layout_height="@dimen/fab_size_normal"
+                android:elevation="@dimen/fab_elevation"
+                android:background="@drawable/ripple_image_button_gradient"
+                android:layout_marginBottom="32dp"
+                android:contentDescription="@string/record_button"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/recording_done"
+                app:layout_constraintStart_toEndOf="@+id/recording_cancel"
+                app:srcCompat="@drawable/ic_voice" />
+
+
+            <ImageButton
+                android:id="@+id/recording_done"
+                style="@style/GradientFabCustom"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="32dp"
+                android:contentDescription="@string/done_button"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_check" />
+
+            <TextView
+                android:id="@+id/recording_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="00:12"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/recording_pause"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

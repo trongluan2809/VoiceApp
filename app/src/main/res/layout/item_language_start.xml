@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingVertical="@dimen/_8sdp"
+    android:id="@+id/layoutItem"
+    android:background="@drawable/border_bottom_item_lang"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icLang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_lang_eng" />
+
+    <TextView
+        android:id="@+id/tvLang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_toLeftOf="@+id/rdbCheck"
+        android:layout_toRightOf="@+id/icLang"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <RadioButton
+        android:id="@+id/rdbCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:checked="true"
+        android:theme="@style/RadioButtonStyle" />
+</RelativeLayout>

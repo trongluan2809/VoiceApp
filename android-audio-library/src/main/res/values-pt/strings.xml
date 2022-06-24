@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s grátis</string>
+    <string name="title_left">%1$s restantes</string>
+    <string name="db">dB</string>
+    <string name="no">Não</string>
+    <string name="yes">Sim</string>
+    <string name="delete_recording">Excluir Gravação</string>
+    <string name="rename_recording">Renomear gravação</string>
+    <string name="file_not_found">Arquivo não encontrado</string>
+    <string name="menu_rename">Renomear</string>
+    <string name="menu_delete">Excluir</string>
+    <string name="tolbar_all">Tudo</string>
+    <string name="tolbar_stars">Estrelas</string>
+    <string name="tolbar_sort_name">Nome</string>
+    <string name="tolbar_sort_date">Encontro</string>
+    <string name="starred">Estrelou</string>
+    <string name="not_starred">Sem estrela</string>
+    <string name="pause_button">Pausa</string>
+    <string name="play_button">Toque</string>
+    <string name="edit_button">Editar</string>
+    <string name="share_button">Compartilhar</string>
+    <string name="trash_button">Excluir</string>
+    <string name="recording_volume_text">(Ganho de software. Use acima de 100% apenas se tiver problemas de hardware)</string>
+    <string name="sort_by">&#160;&#160;Ordenar por…</string>
+    <string name="sort_by_name_a_z">Nome A-Z</string>
+    <string name="sort_by_name_z_a">Nome Z-A</string>
+    <string name="sort_by_date_ask">Data Asc</string>
+    <string name="sort_by_date_desc">Descrição da data</string>
+    <string name="all">Tudo</string>
+    <string name="star">Estrela</string>
+    <string name="delete_recording_confirm">Tem certeza de que deseja excluir este arquivo?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="reset">Redefinir</string>
+    <string name="cut">Corte</string>
+    <string name="trim_audio">APARAR ÁUDIO</string>
+    <string name="save_audio_as">Nome</string>
+    <string name="trim_sec_alert">O comprimento de corte deve ser maior que 0</string>
+    <string name="saved_to">Salvo em</string>
+    <string name="override_file">O arquivo já existe.\nDeseja substituí-lo?</string>
+    <string name="saving_recorder_folder">Gravador de voz</string>
+    <string name="save_audio_failed">Falha ao salvar o arquivo no armazenamento</string>
+    <string name="processing">Em processamento....</string>
+</resources>

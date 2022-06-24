@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s libre</string>
+    <string name="title_left">%1$s ang natitira</string>
+    <string name="db">dB</string>
+    <string name="no">Hindi</string>
+    <string name="yes">Oo</string>
+    <string name="delete_recording">Tanggalin ang Pagre-record</string>
+    <string name="rename_recording">Palitan ang pangalan ng Pagre-record</string>
+    <string name="file_not_found">Hindi nahanap ang file</string>
+    <string name="menu_rename">Palitan ang pangalan</string>
+    <string name="menu_delete">Tanggalin</string>
+    <string name="tolbar_all">Lahat</string>
+    <string name="tolbar_stars">Mga bituin</string>
+    <string name="tolbar_sort_name">Pangalan</string>
+    <string name="tolbar_sort_date">Petsa</string>
+    <string name="starred">Naka-star</string>
+    <string name="not_starred">Hindi naka-star</string>
+    <string name="pause_button">I-pause</string>
+    <string name="play_button">Maglaro</string>
+    <string name="edit_button">I-edit</string>
+    <string name="share_button">Ibahagi</string>
+    <string name="trash_button">Tanggalin</string>
+    <string name="recording_volume_text">(Software gain. Gamitin sa itaas ng 100% lang kung mayroon kang mga isyu sa hardware)</string>
+    <string name="sort_by">&#160;&#160;Pagbukud-bukurin Ayon…</string>
+    <string name="sort_by_name_a_z">Pangalan A-Z</string>
+    <string name="sort_by_name_z_a">Pangalan Z-A</string>
+    <string name="sort_by_date_ask">Petsa Asc</string>
+    <string name="sort_by_date_desc">Petsa Desc</string>
+    <string name="all">Lahat</string>
+    <string name="star">Bituin</string>
+    <string name="delete_recording_confirm">Sigurado ka bang tatanggalin ang file na ito?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="reset">I-reset</string>
+    <string name="cut">Putulin</string>
+    <string name="trim_audio">PUNTIAN AUDIO</string>
+    <string name="save_audio_as">Pangalan</string>
+    <string name="trim_sec_alert">Ang haba ng pag-trim ay dapat na higit sa 0</string>
+    <string name="saved_to">Nai-save sa</string>
+    <string name="override_file">Umiiral na ang file.\nGusto mo ba itong palitan?</string>
+    <string name="saving_recorder_folder">VoiceRecorder</string>
+    <string name="save_audio_failed">Nabigong i-save ang file sa storage</string>
+    <string name="processing">Pinoproseso....</string>
+</resources>

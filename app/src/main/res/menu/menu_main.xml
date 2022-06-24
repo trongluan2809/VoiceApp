@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.activities.MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="100"
+        android:title="@string/menu_search"
+        app:actionViewClass="com.github.axet.androidlibrary.widgets.SearchView"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:orderInCategory="400"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        android:title="@string/sort_by">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_name_ask"
+                    android:title="@string/sort_by_name_a_z" />
+                <item
+                    android:id="@+id/sort_name_desc"
+                    android:title="@string/sort_by_name_z_a" />
+                <item
+                    android:id="@+id/sort_date_ask"
+                    android:title="@string/sort_by_date_ask" />
+                <item
+                    android:id="@+id/sort_date_desc"
+                    android:title="@string/sort_by_date_desc" />
+            </group>
+        </menu>
+    </item>
+   <!-- <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/ic_about"
+        android:orderInCategory="500"
+        android:title="@string/action_about"
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_feedback"
+        android:icon="@drawable/ic_mail"
+        android:orderInCategory="300"
+        android:title="@string/action_feedback"
+        app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,67 @@
+<resources>
+
+    <style name="AppThemeLight" parent="AppThemeLightLib">
+        <item name="colorPrimary">@color/green_bold</item>
+        <item name="colorPrimaryDark">@color/green_bold</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="titleColor">@color/colorPrimary</item>
+        <item name="roundButton">@drawable/round_button_light</item>
+        <item name="alertDialogTheme">@style/AppThemeDialogLight</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <!--    Main Toolbar Custom Style-->
+    <style name="MainToolbarStyle" parent="ThemeOverlay.AppCompat.ActionBar">-->
+        <item name="titleTextAppearance">@style/MainToolbarTitleTheme</item>
+    </style>
+
+    <!--    Main Toolbar Title Custom Theme-->
+    <style name="MainToolbarTitleTheme" parent="Theme.AppCompat.Light">-->
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppThemeDialogLight" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="AppThemeLight.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="AppThemeLight.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeDark" parent="AppThemeDarkLib">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="windowActionBar">false</item>
+        <item name="titleColor">@android:color/primary_text_dark</item>
+        <item name="roundButton">@drawable/round_button_dark</item>
+    </style>
+
+    <style name="AppThemeLight.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="recColor">@color/audio_rec_color</item>
+        <item name="cutColor">@color/audio_cut_color</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeDark.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="recColor">@color/audio_rec_color</item>
+        <item name="cutColor">@color/audio_cut_color</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TrimAudioTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+</resources>

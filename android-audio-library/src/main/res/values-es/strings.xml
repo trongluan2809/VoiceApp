@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s gratis</string>
+    <string name="title_left">Queda %1$s</string>
+    <string name="db">dB</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="delete_recording">Eliminar grabación</string>
+    <string name="rename_recording">Renombrar grabación</string>
+    <string name="file_not_found">Archivo no encontrado</string>
+    <string name="menu_rename">Rebautizar</string>
+    <string name="menu_delete">Borrar</string>
+    <string name="tolbar_all">Todos</string>
+    <string name="tolbar_stars">Estrellas</string>
+    <string name="tolbar_sort_name">Nombre</string>
+    <string name="tolbar_sort_date">Fecha</string>
+    <string name="starred">Sembrado de estrellas</string>
+    <string name="not_starred">No destacado</string>
+    <string name="pause_button">Pausa</string>
+    <string name="play_button">Tocar</string>
+    <string name="edit_button">Editar</string>
+    <string name="share_button">Cuota</string>
+    <string name="trash_button">Borrar</string>
+    <string name="recording_volume_text">(Ganancia de software. Úselo por encima del 100 % solo si tiene problemas de hardware)</string>
+    <string name="sort_by">&#160;&#160;Ordenar por...</string>
+    <string name="sort_by_name_a_z">Nombre de la A a la Z</string>
+    <string name="sort_by_name_z_a">Nombre Z-A</string>
+    <string name="sort_by_date_ask">Fecha Ascendente</string>
+    <string name="sort_by_date_desc">Fecha Descripción</string>
+    <string name="all">Todos</string>
+    <string name="star">Estrella</string>
+    <string name="delete_recording_confirm">¿Estás seguro de eliminar este archivo?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="reset">Reiniciar</string>
+    <string name="cut">Corte</string>
+    <string name="trim_audio">RECORTAR AUDIO</string>
+    <string name="save_audio_as">Nombre</string>
+    <string name="trim_sec_alert">La longitud de recorte debe ser mayor que 0</string>
+    <string name="saved_to">Guardado en</string>
+    <string name="override_file">El archivo ya existe.\n¿Desea reemplazarlo?</string>
+    <string name="saving_recorder_folder">Grabadora de voz</string>
+    <string name="save_audio_failed">No se pudo guardar el archivo en el almacenamiento</string>
+    <string name="processing">Procesando....</string>
+</resources>

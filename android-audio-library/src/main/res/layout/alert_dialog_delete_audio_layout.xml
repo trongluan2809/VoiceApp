@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center"
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/delete_recording"
+            android:textColor="@color/text_normal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/txtMsg"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/delete_recording_confirm"
+            android:textColor="@color/black_A50"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/btnOk"
+            android:minWidth="100dp"
+            android:maxWidth="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/ripple_rounded_rectangle_fill"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/btnCancel"
+            app:layout_constraintTop_toBottomOf="@+id/txtMsg" />
+
+        <Button
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/btnCancel"
+            android:minWidth="100dp"
+            android:maxWidth="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/ripple_rounded_rectangle_outline"
+            android:text="@string/cancel"
+            android:textColor="@color/green_bg"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnOk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMsg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <net.i2p.android.ext.floatingactionbutton.FloatingActionButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:elevation="0dp"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:focusable="false"
+        android:src="@drawable/ic_trash"
+        android:tint="@color/green_bg"
+        app:fabCustomSize="60dp"
+        app:fab_colorNormal="@color/white" />
+
+</FrameLayout>

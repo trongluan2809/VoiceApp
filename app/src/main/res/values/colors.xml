@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_A50">#80FFFFFF</color>
+    <color name="green_medium">#00C294</color>
+    <color name="green_medium_30">#4D00C294</color>
+    <color name="green_gradient_bg">#4DC591</color>
+    <color name="green_gradient_end">#00A67D</color>
+    <color name="green_bold">#017A5C</color>
+    <color name="green_ads">#0C634E</color>
+
+    <color name="text_normal">#222222</color>
+    <color name="text_primary">#000000</color>
+
+    <color name="audio_cut_color">#A5A5A5</color>
+    <color name="audio_rec_color">#4DD0E1</color>
+    <color name="mhm_color_list_divider">#4B4E52</color>
+    <color name="color_585B5E">#585B5E</color>
+    <color name="mhm_color_setting_text">#FFFFFF</color>
+    <color name="color_DD8A31">#DD8A31</color>
+    <color name="color_EDB87F">#EDCBA6</color>
+</resources>

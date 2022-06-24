@@ -1,0 +1,91 @@
+<resources>
+
+    <style name="MaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_DD8A31</item>
+        <item name="android:colorPrimaryDark">@color/color_DD8A31</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/color_DD8A31</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorAccent">@color/color_DD8A31</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <!--    Main Toolbar Custom Style-->
+    <style name="MainToolbarStyle" parent="ThemeOverlay.AppCompat.ActionBar">-->
+        <item name="titleTextAppearance">@style/MainToolbarTitleTheme</item>
+    </style>
+
+    <!--    Main Toolbar Title Custom Theme-->
+    <style name="MainToolbarTitleTheme" parent="Theme.AppCompat.Light">-->
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    Tab Layout Custom Text Theme-->
+    <style name="TabLayoutCustomTextAppearance" parent="TextAppearance.Design.Tab">-->
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--    Custom Image Button Gradient Style-->
+    <style name="GradientFabCustom" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_height">@dimen/fab_size_normal</item>
+        <item name="android:layout_width">@dimen/fab_size_normal</item>
+        <item name="android:elevation">@dimen/fab_elevation</item>
+        <item name="android:background">@drawable/ripple_image_button_gradient</item>
+    </style>
+
+    <style name="RecThemeLight" parent="AppThemeLight">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="recColor">@color/color_DD8A31</item>
+        <item name="cutColor">@color/audio_cut_color</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="RecThemeDark" parent="AppThemeDark">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="recColor">@color/color_DD8A31</item>
+        <item name="cutColor">@color/audio_cut_color</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="RecThemeLight.NoActionBar">
+        <item name="searchViewStyle">@style/SearchViewTheme</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+<!--        <item name="alertDialogTheme">@style/AlertDialogTheme</item>-->
+    </style>
+
+    <!--    AlertDialog CustomTheme-->
+
+
+    <!--    AlertDialog Title Theme-->
+
+    <!--    SearchView CustomTheme-->
+    <style name="SearchViewTheme" parent="Widget.AppCompat.SearchView">-->
+        <item name="searchHintIcon">@null</item>
+        <item name="closeIcon">@drawable/ic_close_24dp</item>
+    </style>
+
+    <style name="RecThemeDark.NoActionBar">
+        <item name="searchViewStyle">@style/SearchViewTheme</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="RadioButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/color_DD8A31</item>
+        <item name="android:textColorSecondary">#C5C5C5</item>
+    </style>
+
+</resources>

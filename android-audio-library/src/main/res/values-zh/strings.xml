@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="title_free">%1$s 免费</string>
+    <string name="title_left">还剩 %1$s</string>
+    <string name="db">D b</string>
+    <string name="no">不</string>
+    <string name="yes">是的</string>
+    <string name="delete_recording">删除录音</string>
+    <string name="rename_recording">重命名录音</string>
+    <string name="file_not_found">文件未找到</string>
+    <string name="menu_rename">改名</string>
+    <string name="menu_delete">删除</string>
+    <string name="tolbar_all">全部</string>
+    <string name="tolbar_stars">星星</string>
+    <string name="tolbar_sort_name">姓名</string>
+    <string name="tolbar_sort_date">日期</string>
+    <string name="starred">已加星标</string>
+    <string name="not_starred">未加星标</string>
+    <string name="pause_button">暂停</string>
+    <string name="play_button">玩</string>
+    <string name="edit_button">编辑</string>
+    <string name="share_button">分享</string>
+    <string name="trash_button">删除</string>
+    <string name="recording_volume_text">（软件增益。仅当您有硬件问题时才使用 100% 以上）</string>
+    <string name="sort_by">&#160;&#160;排序方式...</string>
+    <string name="sort_by_name_a_z">名称 A-Z</string>
+    <string name="sort_by_name_z_a">名称 Z-A</string>
+    <string name="sort_by_date_ask">日期升序</string>
+    <string name="sort_by_date_desc">日期描述</string>
+    <string name="all">全部</string>
+    <string name="star">星星</string>
+    <string name="delete_recording_confirm">您确定要删除此文件吗？</string>
+    <string name="ok">好的</string>
+    <string name="cancel">取消</string>
+    <string name="reset">重置</string>
+    <string name="cut">切</string>
+    <string name="trim_audio">修剪音频</string>
+    <string name="save_audio_as">姓名</string>
+    <string name="trim_sec_alert">修剪长度必须大于 0</string>
+    <string name="saved_to">保存到</string>
+    <string name="override_file">文件已存在。\n要替换它吗？</string>
+    <string name="saving_recorder_folder">录音机</string>
+    <string name="save_audio_failed">无法将文件保存到存储器</string>
+    <string name="processing">加工....</string>
+</resources>

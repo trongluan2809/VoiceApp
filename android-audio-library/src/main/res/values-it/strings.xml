@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_source_title"><b>Sorgente di registrazione</b></string>
+    <string name="pref_filters"><b>FILTRI</b></string>
+    <string name="pref_volume_title"><b>Volume di registrazione</b></string>
+    <string name="pref_voice_title"><b>Filtro vocale</b></string>
+    <string name="pref_voice_summary">Filtro vocale passa-banda</string>
+    <string name="pref_skip_title"><b>Salta il silenzio</b></string>
+    <string name="pref_skip_summary">Salta silenzio durante la registrazione</string>
+
+    <string name="title_free">%1$s gratis</string>
+    <string name="title_left">%1$s rimasti</string>
+    <string name="db">dB</string>
+    <string name="no">No</string>
+    <string name="yes">sì</string>
+    <string name="delete_recording">Elimina registrazione</string>
+    <string name="rename_recording">Rinomina registrazione</string>
+    <string name="file_not_found">File non trovato</string>
+    <string name="menu_rename">Rinominare</string>
+    <string name="menu_delete">Elimina</string>
+    <string name="tolbar_all">Tutto</string>
+    <string name="tolbar_stars">Stelle</string>
+    <string name="tolbar_sort_name">Nome</string>
+    <string name="tolbar_sort_date">Data</string>
+    <string name="starred">Ha recitato</string>
+    <string name="not_starred">Non contrassegnato</string>
+    <string name="pause_button">Pausa</string>
+    <string name="play_button">Giocare a</string>
+    <string name="edit_button">Modificare</string>
+    <string name="share_button">Condividere</string>
+    <string name="trash_button">Elimina</string>
+    <string name="recording_volume_text">(Guadagno software. Utilizzare oltre il 100% solo in caso di problemi hardware)</string>
+    <string name="sort_by">&#160;&#160;Ordina per...</string>
+    <string name="sort_by_name_a_z">Nome dalla A alla Z</string>
+    <string name="sort_by_name_z_a">Nome Z-A</string>
+    <string name="sort_by_date_ask">Data Asc</string>
+    <string name="sort_by_date_desc">Data Disc</string>
+    <string name="all">Tutto</string>
+    <string name="star">Stella</string>
+    <string name="delete_recording_confirm">Sei sicuro di eliminare questo file?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annulla</string>
+    <string name="reset">Ripristina</string>
+    <string name="cut">Tagliare</string>
+    <string name="trim_audio">TRIM AUDIO</string>
+    <string name="save_audio_as">Nome</string>
+    <string name="trim_sec_alert">La lunghezza di taglio deve essere maggiore di 0</string>
+    <string name="saved_to">Salvato in</string>
+    <string name="override_file">Il file esiste già.\nVuoi sostituirlo?</string>
+    <string name="saving_recorder_folder">Registratore vocale</string>
+    <string name="save_audio_failed">Impossibile salvare il file nella memoria</string>
+    <string name="processing">In lavorazione....</string>
+</resources>

@@ -1,0 +1,59 @@
+<resources>
+    <string-array name="encodings_text">
+        <!--<item>.ogg (default)</item>
+        <item>.wav</item>-->
+        <item>.wav (default)</item>
+        <item>.ogg</item>
+    </string-array>
+
+    <string name="pref_source_title"><b>Recording Source</b></string>
+    <string name="pref_filters"><b>FILTERS</b></string>
+    <string name="pref_volume_title"><b>Recording Volume</b></string>
+    <string name="pref_voice_title"><b>Voice Filter</b></string>
+    <string name="pref_voice_summary">Bandpass Voice Filter</string>
+    <string name="pref_skip_title"><b>Skip Silence</b></string>
+    <string name="pref_skip_summary">Skip Silence while recording</string>
+
+    <string name="title_free">%1$s free</string>
+    <string name="title_left">%1$s left</string>
+    <string name="db">dB</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="delete_recording">Delete Recording</string>
+    <string name="rename_recording">Rename Recording</string>
+    <string name="file_not_found">File not found</string>
+    <string name="menu_rename">Rename</string>
+    <string name="menu_delete">Delete</string>
+    <string name="tolbar_all">All</string>
+    <string name="tolbar_stars">Stars</string>
+    <string name="tolbar_sort_name">Name</string>
+    <string name="tolbar_sort_date">Date</string>
+    <string name="starred">Starred</string>
+    <string name="not_starred">Not starred</string>
+    <string name="pause_button">Pause</string>
+    <string name="play_button">Play</string>
+    <string name="edit_button">Edit</string>
+    <string name="share_button">Share</string>
+    <string name="trash_button">Delete</string>
+    <string name="recording_volume_text">(Software gain. Use above 100% only if you have hardware issues)</string>
+    <string name="sort_by">&#160;&#160;Sort By…</string>
+    <string name="sort_by_name_a_z">Name A-Z</string>
+    <string name="sort_by_name_z_a">Name Z-A</string>
+    <string name="sort_by_date_ask">Date Asc</string>
+    <string name="sort_by_date_desc">Date Desc</string>
+    <string name="all">All</string>
+    <string name="star">Star</string>
+    <string name="delete_recording_confirm">Are you sure to delete this file?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="cut">Cut</string>
+    <string name="trim_audio">TRIM AUDIO</string>
+    <string name="save_audio_as">Name</string>
+    <string name="trim_sec_alert">Trimming length must be greater than 0</string>
+    <string name="saved_to">Saved to </string>
+    <string name="override_file">File already exists.\nDo you want to replace it?</string>
+    <string name="saving_recorder_folder">VoiceRecorder</string>
+    <string name="save_audio_failed">Failed to save file to storage</string>
+    <string name="processing">Processing....</string>
+</resources>

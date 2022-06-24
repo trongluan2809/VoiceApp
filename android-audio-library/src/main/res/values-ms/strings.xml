@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s percuma</string>
+    <string name="title_left">%1$s tinggal</string>
+    <string name="db">dB</string>
+    <string name="no">Tidak</string>
+    <string name="yes">ya</string>
+    <string name="delete_recording">Padamkan Rakaman</string>
+    <string name="rename_recording">Namakan semula Rakaman</string>
+    <string name="file_not_found">Fail tidak dijumpai</string>
+    <string name="menu_rename">Namakan semula</string>
+    <string name="menu_delete">Padam</string>
+    <string name="tolbar_all">Semua</string>
+    <string name="tolbar_stars">Bintang</string>
+    <string name="tolbar_sort_name">nama</string>
+    <string name="tolbar_sort_date">Tarikh</string>
+    <string name="starred">Dibintangi</string>
+    <string name="not_starred">Tidak dibintangi</string>
+    <string name="pause_button">jeda</string>
+    <string name="play_button">Main</string>
+    <string name="edit_button">Sunting</string>
+    <string name="share_button">Kongsi</string>
+    <string name="trash_button">Padam</string>
+    <string name="recording_volume_text">(Keuntungan perisian. Gunakan melebihi 100% hanya jika anda mempunyai masalah perkakasan)</string>
+    <string name="sort_by">&#160;&#160;Isih Mengikut…</string>
+    <string name="sort_by_name_a_z">Nama A-Z</string>
+    <string name="sort_by_name_z_a">Nama Z-A</string>
+    <string name="sort_by_date_ask">Tarikh Asc</string>
+    <string name="sort_by_date_desc">Tarikh Des</string>
+    <string name="all">Semua</string>
+    <string name="star">Bintang</string>
+    <string name="delete_recording_confirm">Adakah anda pasti akan memadamkan fail ini?</string>
+    <string name="ok">okey</string>
+    <string name="cancel">Batal</string>
+    <string name="reset">Tetapkan semula</string>
+    <string name="cut">potong</string>
+    <string name="trim_audio">TRIM AUDIO</string>
+    <string name="save_audio_as">nama</string>
+    <string name="trim_sec_alert">Panjang pemangkasan mestilah lebih besar daripada 0</string>
+    <string name="saved_to">Disimpan ke</string>
+    <string name="override_file">Fail sudah wujud.\nAdakah anda mahu menggantikannya?</string>
+    <string name="saving_recorder_folder">Rakaman suara</string>
+    <string name="save_audio_failed">Gagal menyimpan fail ke storan</string>
+    <string name="processing">Memproses....</string>
+</resources>

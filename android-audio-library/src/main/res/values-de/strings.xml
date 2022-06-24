@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_free">%1$s kostenlos</string>
+    <string name="title_left">%1$s übrig</string>
+    <string name="db">dB</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="delete_recording">Aufnahme löschen</string>
+    <string name="rename_recording">Aufnahme umbenennen</string>
+    <string name="file_not_found">Datei nicht gefunden</string>
+    <string name="menu_rename">Umbenennen</string>
+    <string name="menu_delete">Löschen</string>
+    <string name="tolbar_all">Alle</string>
+    <string name="tolbar_stars">Sterne</string>
+    <string name="tolbar_sort_name">Name</string>
+    <string name="tolbar_sort_date">Datum</string>
+    <string name="starred">Markiert</string>
+    <string name="not_starred">Nicht gespielt</string>
+    <string name="pause_button">Pause</string>
+    <string name="play_button">Spielen</string>
+    <string name="edit_button">Bearbeiten</string>
+    <string name="share_button">Teilen</string>
+    <string name="trash_button">Löschen</string>
+    <string name="recording_volume_text">(Softwaregewinn. Verwenden Sie über 100 % nur bei Hardwareproblemen)</string>
+    <string name="sort_by">&#160;&#160;Sortieren nach…</string>
+    <string name="sort_by_name_a_z">Benennen Sie A-Z</string>
+    <string name="sort_by_name_z_a">Name Z-A</string>
+    <string name="sort_by_date_ask">Datum aufsteigend</string>
+    <string name="sort_by_date_desc">Datum Beschr</string>
+    <string name="all">Alle</string>
+    <string name="star">Stern</string>
+    <string name="delete_recording_confirm">Möchten Sie diese Datei wirklich löschen?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Absagen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="cut">Schneiden</string>
+    <string name="trim_audio">AUDIO TRIMMEN</string>
+    <string name="save_audio_as">Name</string>
+    <string name="trim_sec_alert">Die Trimmlänge muss größer als 0 sein</string>
+    <string name="saved_to">Gespeichert unter</string>
+    <string name="override_file">Datei existiert bereits.\nMöchten Sie sie ersetzen?</string>
+    <string name="saving_recorder_folder">Diktiergerät</string>
+    <string name="save_audio_failed">Datei konnte nicht im Speicher gespeichert werden</string>
+    <string name="processing">Wird bearbeitet....</string>
+</resources>

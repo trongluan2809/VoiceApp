@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "455554683202",
+    "project_id": "voice-recoder-bb5f4",
+    "storage_bucket": "voice-recoder-bb5f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455554683202:android:f4dad145536c5fe79778db",
+        "android_client_info": {
+          "package_name": "com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455554683202-vnuv02pbskjn7a03nt055ap40g8hvnt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAweRGge2SB5i5Jr-bSypiXJAZ8FfDM7vM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455554683202-vnuv02pbskjn7a03nt055ap40g8hvnt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2839737156094643~9723288378"
+    }
+  ],
+  "configuration_version": "1"
+}

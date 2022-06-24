@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="black_A50">#80000000</color>
+    <color name="wave_unselected_bg">#0D000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_A50">#80FFFFFF</color>
+    <color name="green_medium">#00C294</color>
+    <color name="green_medium_30">#4D00C294</color>
+    <color name="green_bold">#017A5C</color>
+    <color name="green_bg">#4DC591</color>
+
+    <color name="colorPrimary">@color/green_bold</color>
+    <color name="colorPrimaryDark">#086C53</color>
+    <color name="colorAccentLight">@color/green_medium</color>
+    <color name="colorAccentDark">@color/black</color>
+    <color name="text_normal">#222222</color>
+    <color name="text_primary">#000000</color>
+    <color name="time_code_text">#0B2239</color>
+
+    <color name="audio_cut_color">#A5A5A5</color>
+    <color name="audio_rec_color">#4DD0E1</color>
+    <color name="grey">#990B2239</color>
+</resources>

@@ -1,0 +1,126 @@
+import org.apache.commons.io.FilenameUtils
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.github.axet.dxplugin'
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 28
+        versionName "2.8"
+        multiDexEnabled true
+        buildFeatures {
+            viewBinding = true
+        }
+        vectorDrawables.useSupportLibrary = true
+
+        def formattedDate = new Date().format('MMM.dd.yyyy')
+        archivesBaseName = "VoiceRecoder_v${versionName}(${versionCode})_${formattedDate}"
+    }
+    bundle {
+
+        language {
+            enableSplit = false
+
+
+        }
+        density {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+        abi {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+    }
+    buildTypes {
+        debug {
+            shrinkResources true
+            minifyEnabled true
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFileName = FilenameUtils.getExtension(android.defaultConfig.applicationId) + "-" + (output.getFilter(com.android.build.OutputFile.ABI) ?: "universal") + "-" + android.defaultConfig.versionName + "-" + variant.buildType.name + ".apk"
+        }
+    }
+    bundle {
+        abi {
+            enableSplit = true
+        }
+    }
+    splits {
+        abi {
+            enable false
+            universalApk true
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.4.0'
+   // implementation 'com.github.axet:android-library:1.34.1'
+    implementation('com.github.axet:wget:1.7.0') { exclude group: 'org.json', module: 'json' }
+    implementation 'com.google.android.exoplayer:exoplayer:2.14.2'
+    implementation project(path: ':android-audio-library')
+    implementation project(path: ':android-library')
+
+    // RxAndroid
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.13'
+    // RxBinding
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+
+    // Admob
+ //   implementation 'com.google.android.gms:play-services-vision:20.1.3'
+   // implementation 'com.github.Namdh1212:AdmobUtilsLibrary:4.5.1'
+   // implementation 'com.google.android.gms:play-services-ads:20.2.0'
+
+    // lib ads
+    implementation 'com.github.quangchienictu:AmazicAdsLibrary:1.2.9'
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    //play core
+    implementation 'com.google.android.play:core:1.10.0'
+
+
+    // Multidex
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-config'
+    //
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+    //applovin mediation
+    implementation 'com.google.ads.mediation:applovin:10.3.3.0'
+
+    //facebook mediation
+    implementation 'com.google.ads.mediation:facebook:6.6.0.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.google.android.material:material:1.2.0'
+
+}

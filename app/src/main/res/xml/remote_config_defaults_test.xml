@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>ads_admob_inter_splash</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_inter_app_intro</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_inter_back_home</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_inter_recording</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_inter_trim_audio</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_inter_settings</key>
+        <value>ca-app-pub-3940256099942544/1033173712</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_on_resume</key>
+        <value>ca-app-pub-3940256099942544/3419835294</value>
+    </entry>
+
+    <entry>
+        <key>ads_admob_native_home_recording_list</key>
+        <value>ca-app-pub-3940256099942544/2247696110</value>
+    </entry>
+</defaultsMap>
