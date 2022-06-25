@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_gravity="center"
         android:layout_height="60dp"
-        android:background="@drawable/border_header_main"
+        android:background="@color/color_78797A"
         android:paddingVertical="@dimen/_10sdp"
         android:paddingHorizontal="@dimen/_5sdp"
         android:layout_width="match_parent">
@@ -34,7 +34,7 @@
             android:src="@drawable/ic_done_language" />
     </RelativeLayout>
     <View
-        android:background="@color/green_bold"
+        android:background="@color/color_78797A"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <androidx.core.widget.NestedScrollView

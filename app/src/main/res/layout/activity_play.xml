@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_gravity="center"
         android:layout_height="135dp"
-        android:background="@drawable/main_appbar"
+        android:background="@color/color_78797A"
         android:paddingVertical="@dimen/_10sdp"
         android:paddingHorizontal="@dimen/_5sdp"
         android:layout_width="match_parent">
@@ -136,7 +136,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
                         android:text="00:00"
-                        android:textColor="@color/green_bold" />
+                        android:textColor="@color/color_DD8A31" />
 
                     <TextView
                         android:id="@+id/file_length_text_view"
@@ -147,7 +147,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="10dp"
                         android:text="00:00"
-                        android:textColor="@color/green_bold" />
+                        android:textColor="@color/color_DD8A31" />
 
                 </RelativeLayout>
 

@@ -59,7 +59,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/ripple_rounded_rectangle_outline"
         android:text="@string/cancel"
-        android:textColor="@color/green_bg"
+        android:textColor="@color/color_DD8A31"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnOk"

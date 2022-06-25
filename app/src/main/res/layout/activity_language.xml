@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/color_78797A"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:layout_gravity="center"
-        android:background="#CC000000"
+        android:background="@color/color_78797A"
         android:gravity="center_vertical"
         android:paddingHorizontal="@dimen/_5sdp"
         android:paddingVertical="@dimen/_10sdp">

@@ -6,7 +6,7 @@
         <shape android:shape="line">
             <stroke
                 android:width="3dp"
-                android:color="#4D0C634E" />
+                android:color="@color/color_EDB87F" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
@@ -14,7 +14,7 @@
             <shape android:shape="line">
                 <stroke
                     android:width="3dp"
-                    android:color="@color/green_bold" />
+                    android:color="@color/color_DD8A31" />
             </shape>
         </clip>
     </item>
