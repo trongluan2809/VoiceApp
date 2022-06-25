@@ -26,7 +26,7 @@
             android:contentDescription="@string/not_starred"
             android:padding="3dp"
             app:srcCompat="@drawable/ic_star_border"
-            app:tint="?attr/colorAccent" />
+            />
 
         <TextView
             android:id="@+id/txtAudioTitle"

@@ -324,7 +324,7 @@ public class PitchView extends ViewGroup {
             paint = new Paint();
 
             // Color of the underline below dB number
-            paint.setColor(getResources().getColor(R.color.green_bg));
+            paint.setColor(getResources().getColor(R.color.audio_cut_color));
             paint.setStrokeWidth(pitchWidth);
         }
 

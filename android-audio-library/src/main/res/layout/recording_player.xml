@@ -12,7 +12,7 @@
         android:id="@+id/recording_player"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/green_bg"
+        android:background="#EDCBA6"
         android:orientation="vertical">
 
         <LinearLayout
