@@ -28,6 +28,7 @@ import com.github.axet.androidlibrary.preferences.StoragePathPreferenceCompat;
 import com.github.axet.audiorecorder.R;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.AudioApplication;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.Storage;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.services.ControlsService;
@@ -83,6 +84,7 @@ public class SettingsActivity extends AppCompatSettingsThemeActivity implements 
         // Set Language
         SystemUtil.setLocale(getBaseContext());
 
+        Common.changeColor(this);
 
         storage = new Storage(this);
         setContentView(R.layout.activity_settings);

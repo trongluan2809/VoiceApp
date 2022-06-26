@@ -52,6 +52,7 @@ import com.github.axet.androidlibrary.widgets.ErrorDialog;
 import com.github.axet.androidlibrary.widgets.OpenFileDialog;
 import com.github.axet.androidlibrary.widgets.PopupWindowCompat;
 import com.github.axet.audiorecorder.R;
+import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.AudioApplication;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.RecordingStorage;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.Storage;
@@ -366,6 +367,7 @@ public class RecordingActivity extends AppCompatThemeActivity {
         // Set Language
         SystemUtil.setLocale(getBaseContext());
 
+        Common.changeColor(this);
 
         showLocked(getWindow());
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);

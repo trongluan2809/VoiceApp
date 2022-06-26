@@ -3,8 +3,8 @@
     <style name="AppThemeLight" parent="AppThemeLightLib">
         <item name="colorPrimary">@color/green_bold</item>
         <item name="colorPrimaryDark">@color/green_bold</item>
-        <item name="colorAccent">@color/colorAccentLight</item>
-        <item name="titleColor">@color/colorPrimary</item>
+        <item name="colorAccent">@color/color_DD8A31</item>
+        <item name="titleColor">@color/color_DD8A31</item>
         <item name="roundButton">@drawable/round_button_light</item>
         <item name="alertDialogTheme">@style/AppThemeDialogLight</item>
         <item name="fontFamily">@font/montserrat</item>

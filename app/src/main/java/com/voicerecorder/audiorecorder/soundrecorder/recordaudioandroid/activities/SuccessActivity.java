@@ -27,6 +27,7 @@ import com.github.axet.audiorecorder.R;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
+import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.AudioApplication;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.Storage;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.utils.SystemUtil;
@@ -55,6 +56,7 @@ public class SuccessActivity extends AppCompatThemeActivity {
         // Set Language
         SystemUtil.setLocale(getBaseContext());
 
+        Common.changeColor(this);
 
         setContentView(R.layout.activity_success);
 

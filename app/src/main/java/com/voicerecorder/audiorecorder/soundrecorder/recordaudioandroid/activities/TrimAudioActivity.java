@@ -130,6 +130,8 @@ public class TrimAudioActivity extends AppCompatActivity implements View.OnClick
         // Set Language
         SystemUtil.setLocale(getBaseContext());
 
+        Common.changeColor(this);
+
         storage = new Storage(this);
         setContentView(R.layout.activity_trim_audio);
         Toolbar toolbar = findViewById(R.id.toolbar);

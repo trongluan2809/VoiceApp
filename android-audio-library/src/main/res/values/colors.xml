@@ -22,4 +22,5 @@
     <color name="audio_cut_color">#A5A5A5</color>
     <color name="audio_rec_color">#4DD0E1</color>
     <color name="grey">#990B2239</color>
+    <color name="color_DD8A31">#D89349</color>
 </resources>

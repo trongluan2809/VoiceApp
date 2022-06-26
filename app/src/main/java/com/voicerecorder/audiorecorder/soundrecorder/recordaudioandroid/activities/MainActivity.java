@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatThemeActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Common.changeColor(this);
         setContentView(R.layout.activity_main);
 
         // Set Language

@@ -69,7 +69,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/ripple_rounded_rectangle_outline"
             android:text="@string/cancel"
-            android:textColor="@color/green_bg"
+            android:textColor="#D89349"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnOk"
@@ -86,7 +86,7 @@
         android:clickable="false"
         android:focusable="false"
         android:src="@drawable/ic_trash"
-        android:tint="@color/green_bg"
+        android:tint="#D89349"
         app:fabCustomSize="60dp"
         app:fab_colorNormal="@color/white" />
 
