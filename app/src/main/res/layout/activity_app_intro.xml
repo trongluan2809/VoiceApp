@@ -52,11 +52,11 @@
             android:layout_alignParentEnd="true"
             android:layout_gravity="end"
             android:layout_marginEnd="@dimen/intro_fab_margin"
+            android:backgroundTint="@color/color_DD8A31"
             android:src="@drawable/ic_next"
             app:elevation="0dp"
             app:maxImageSize="18dp"
-            tools:ignore="ContentDescription"
-            android:backgroundTint="@color/color_DD8A31"/>
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 
