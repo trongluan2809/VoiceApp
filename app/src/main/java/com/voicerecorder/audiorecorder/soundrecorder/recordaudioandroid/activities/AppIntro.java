@@ -10,6 +10,7 @@ import android.os.Environment;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -17,15 +18,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.amazic.ads.callback.InterCallback;
-import com.amazic.ads.util.Admod;
+import com.ads.control.ads.Admod;
+import com.ads.control.funtion.AdCallback;
 import com.github.axet.audiorecorder.R;
 import com.github.axet.audiorecorder.databinding.ActivityAppIntroBinding;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.firebase.analytics.FirebaseAnalytics;
+import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.fragment.FragmentIntro1;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.fragment.FragmentIntro2;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.fragment.FragmentIntro3;
@@ -34,7 +35,7 @@ import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.utils.Sy
 public class AppIntro extends AppCompatActivity {
     private ActivityAppIntroBinding binding;
     private int position = 0;
-
+    InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,21 +46,30 @@ public class AppIntro extends AppCompatActivity {
         SystemUtil.setLocale(getBaseContext());
 
 
+        loadAdsInterIntro();
 
-        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkPermission()) {
-                Admod.getInstance().setOpenActivityAfterShowInterAds(true);
-            } else {
-                Admod.getInstance().setOpenActivityAfterShowInterAds(false);
-            }
-        } else {
-            Admod.getInstance().setOpenActivityAfterShowInterAds(true);
-        }*/
         binding.fabNext.setOnClickListener(v -> {
             if (position < 2) {
                 binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position + 1));
             } else {
-                startMainActivity();
+
+                if (Common.checkNetWork(this)){
+                    Admod.getInstance().forceShowInterstitial(this,
+                            mInterstitialAd,
+                            new AdCallback(){
+                                @Override
+                                public void onAdClosed() {
+                                    startMainActivity();
+                                }
+
+                                @Override
+                                public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                                    startMainActivity();
+                                }
+                            });
+                }else {
+                    startMainActivity();
+                }
             }
         });
 
@@ -141,5 +151,24 @@ public class AppIntro extends AppCompatActivity {
             int writeExternalStoragePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
             return readExternalStoragePermission == PackageManager.PERMISSION_GRANTED && writeExternalStoragePermission == PackageManager.PERMISSION_GRANTED;
         }
+    }
+
+    private void loadAdsInterIntro(){
+        Admod.getInstance().getInterstitalAds(
+                this,
+                getResources().getString(R.string.inter_intro),new AdCallback(){
+                    @Override
+                    public void onInterstitialLoad(@Nullable @org.jetbrains.annotations.Nullable InterstitialAd interstitialAd) {
+                        super.onInterstitialLoad(interstitialAd);
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                        super.onAdFailedToLoad(i);
+                    }
+                }
+        );
+
     }
 }

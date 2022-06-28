@@ -117,9 +117,17 @@
     <string name="want_to_close_the_app">Want to close the app ?</string>
 
 
-    <!--ADS TEST-->
-    <string name="app_id">ca-app-pub-4973559944609228~2346710861</string>
-
+    //ads test
+    <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="inter_splash" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="appopen_resume" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="inter_intro" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="inter_welcome" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="inter_record" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="inter_record_done" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="inter_record_success" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_all" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="native_language" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
 
 
 </resources>

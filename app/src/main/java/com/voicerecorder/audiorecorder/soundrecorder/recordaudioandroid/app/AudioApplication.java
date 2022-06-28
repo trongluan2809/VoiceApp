@@ -11,8 +11,7 @@ import android.view.View;
 
 import androidx.preference.PreferenceManager;
 
-import com.amazic.ads.util.Admod;
-import com.amazic.ads.util.AppOpenManager;
+import com.ads.control.ads.AppOpenManager;
 import com.github.axet.androidlibrary.app.NotificationManagerCompat;
 import com.github.axet.androidlibrary.widgets.NotificationChannelCompat;
 import com.github.axet.androidlibrary.widgets.RemoteNotificationCompat;
@@ -37,7 +36,7 @@ public class AudioApplication extends MainApplication {
     public NotificationChannelCompat channelPersistent;
     public RecordingStorage recording;
     public EncodingStorage encodings;
-
+    private final boolean isShowAdsResume = true;
 
     public static AudioApplication from(Context context) {
         return (AudioApplication) MainApplication.from(context);
@@ -52,8 +51,10 @@ public class AudioApplication extends MainApplication {
         encodings = new EncodingStorage(this);
 
 
-
-
+        if(isShowAdsResume) {
+            AppOpenManager.getInstance().init(this, getString(R.string.appopen_resume));
+        }
+        AppOpenManager.getInstance().disableAppResumeWithActivity(SplashActivity.class);
 
         switch (getVersion(PREFERENCE_VERSION, R.xml.pref_general)) {
             case -1:

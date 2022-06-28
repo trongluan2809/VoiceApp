@@ -37,21 +37,29 @@
         android:background="@color/color_78797A"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
-    <androidx.core.widget.NestedScrollView
-        android:layout_weight="1"
-        android:fillViewport="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        <RelativeLayout
             android:orientation="vertical"
-            android:paddingHorizontal="20dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+                android:layout_height="match_parent"
+                android:layout_above="@+id/fr_ads"/>
+
+            <FrameLayout
+                android:id="@+id/fr_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <include layout="@layout/ads_shimer_native_language" />
+            </FrameLayout>
+        </RelativeLayout>
 </LinearLayout>

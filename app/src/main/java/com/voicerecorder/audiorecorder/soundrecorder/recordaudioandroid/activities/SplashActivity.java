@@ -1,7 +1,5 @@
 package com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.activities;
 
-import static com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common.EXTRA_AUDIO_URI;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,17 +11,14 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
-import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amazic.ads.callback.InterCallback;
-import com.amazic.ads.util.Admod;
-import com.bumptech.glide.Glide;
+import com.ads.control.ads.Admod;
+import com.ads.control.funtion.AdCallback;
 import com.github.axet.audiorecorder.R;
-import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.utils.SharePrefUtils;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.utils.SystemUtil;
@@ -34,7 +29,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
 
 public class SplashActivity extends AppCompatActivity {
     boolean guide;
@@ -49,58 +43,79 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MY_PREFS_GUIDE", MODE_PRIVATE);
         guide = sharedPreferences.getBoolean("guided", false);
 
+        if (!isTaskRoot() && getIntent().hasCategory(Intent.CATEGORY_LAUNCHER) && getIntent().getAction() != null && getIntent().getAction().equals(Intent.ACTION_MAIN)) {
+            finish();
+            return;
+        }
 
         Uri uri = getIntent().getData();
-        if(uri!=null){
+        if (uri != null) {
             MediaMetadataRetriever mmr = new MediaMetadataRetriever();
             mmr.setDataSource(this, uri);
             String title = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
             String length = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
-            Intent intent = new Intent(this,PlayActivity.class);
+            Intent intent = new Intent(this, PlayActivity.class);
             try {
                 File file = fileFromContentUri(this, uri);
-                if(title==null)title = file.getName();
-                intent.putExtra("title",title);
-                intent.putExtra("length",length);
-                intent.putExtra("path",file.getPath());
+                if (title == null) title = file.getName();
+                intent.putExtra("title", title);
+                intent.putExtra("length", length);
+                intent.putExtra("path", file.getPath());
             } catch (IOException e) {
                 title = getFileName(uri.getPath());
-                intent.putExtra("title",title);
-                intent.putExtra("length",length);
-                intent.putExtra("path",convertLink(uri.getPath()));
+                intent.putExtra("title", title);
+                intent.putExtra("length", length);
+                intent.putExtra("path", convertLink(uri.getPath()));
             }
 
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    startActivity(intent);
-                }
-            },2000);
+            if (Common.checkNetWork(this)) {
+                Admod.getInstance().loadSplashInterstitalAds(
+                        this,
+                        getString(R.string.inter_splash),
+                        2500,
+                        5000,
+                        new AdCallback(){
+                            @Override
+                            public void onAdClosed() {
+                                startActivity(intent);
+                            }
 
+                            @Override
+                            public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                                onAdClosed();
+                            }
+                        });
+            }else {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(intent);
+                    }
+                }, 2000);
 
-        }else{
+            }
+
+        } else {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     startActivity();
                 }
-            },2000);
-
+            }, 2000);
 
 
         }
         //end
     }
 
-    public void startActivity(){
-       if(SharePrefUtils.getCountOpenFirstHelp(this)==0){
+    public void startActivity() {
+        if (SharePrefUtils.getCountOpenFirstHelp(this) == 0) {
             startActivity(new Intent(SplashActivity.this, LanguageStartActivity.class));
-        }else{
+        } else {
             startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
         }
-       finish();
+        finish();
     }
-
 
 
     File fileFromContentUri(Context context, Uri contentUri) throws IOException {
@@ -160,6 +175,7 @@ public class SplashActivity extends AppCompatActivity {
         String fileType = context.getContentResolver().getType(uri);
         return MimeTypeMap.getSingleton().getExtensionFromMimeType(fileType);
     }
+
     public String getPath(Uri uri) {
         String[] projection = {MediaStore.Images.Media.DATA};
         Cursor cursor = getContentResolver().query(uri, projection, null, null, null);
@@ -170,14 +186,16 @@ public class SplashActivity extends AppCompatActivity {
         cursor.close();
         return s;
     }
-    private String getFileName(String path){
-         try {
-             return path.substring(path.lastIndexOf("/")+1);
-        }catch (Exception e){
-             return "unknown";
+
+    private String getFileName(String path) {
+        try {
+            return path.substring(path.lastIndexOf("/") + 1);
+        } catch (Exception e) {
+            return "unknown";
         }
     }
-    private String convertLink(String path){
-        return path.replace("/document/raw:","").trim();
+
+    private String convertLink(String path) {
+        return path.replace("/document/raw:", "").trim();
     }
 }

@@ -40,6 +40,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.menu.MenuBuilder;
@@ -53,17 +54,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.amazic.ads.util.Admod;
-import com.amazic.ads.util.AppOpenManager;
+import com.ads.control.ads.Admod;
+import com.ads.control.ads.AppOpenManager;
+import com.ads.control.funtion.AdCallback;
 import com.github.axet.androidlibrary.activities.AppCompatThemeActivity;
 import com.github.axet.androidlibrary.widgets.ErrorDialog;
 import com.github.axet.androidlibrary.widgets.OpenFileDialog;
 import com.github.axet.androidlibrary.widgets.SearchView;
 import com.github.axet.audiorecorder.R;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.AudioApplication;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.EncodingStorage;
@@ -93,6 +96,8 @@ public class MainActivity extends AppCompatThemeActivity {
     private ScreenReceiver receiver;
     private EncodingDialog encoding;
     private LinearLayout llEmpty;
+
+    InterstitialAd mInterstitialAdRecord;
 
     private static boolean isOpenResume = true;
 
@@ -140,6 +145,11 @@ public class MainActivity extends AppCompatThemeActivity {
             takePermission();
         }
         Admod.getInstance().setOpenActivityAfterShowInterAds(true);
+
+
+        //
+        loadAdsInterRecord();
+
         shared = PreferenceManager.getDefaultSharedPreferences(this);
         storage = new Storage(this);
 
@@ -153,9 +163,29 @@ public class MainActivity extends AppCompatThemeActivity {
         fab = findViewById(R.id.fab);
 
         ivRecord.setOnClickListener(view -> {
-            recordings.select(-1);
-            finish();
-            RecordingActivity.startActivity(MainActivity.this, false);
+            if (Common.checkNetWork(this)){
+                Admod.getInstance().forceShowInterstitial(this,
+                        mInterstitialAdRecord,
+                        new AdCallback(){
+                            @Override
+                            public void onAdClosed() {
+                                recordings.select(-1);
+                                finish();
+                                RecordingActivity.startActivity(MainActivity.this, false);
+                            }
+
+                            @Override
+                            public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                                recordings.select(-1);
+                                finish();
+                                RecordingActivity.startActivity(MainActivity.this, false);
+                            }
+                        });
+            }else {
+                recordings.select(-1);
+                finish();
+                RecordingActivity.startActivity(MainActivity.this, false);
+            }
         });
 
         rvRecorded = findViewById(R.id.rvRecorded);
@@ -323,11 +353,11 @@ public class MainActivity extends AppCompatThemeActivity {
         EditText edtSub = dialogView.findViewById(R.id.edtSubject);
         EditText edtMes = dialogView.findViewById(R.id.edtMessage);
         Button btnSend = dialogView.findViewById(R.id.btnSend);
-        String subStr = "[VoiceRecorder - TVApp] - User feedback";
+        String subStr = "Feedback";
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = "v20210725@gmail.com";
+                String email = Common.email;
                 String sub = edtSub.getText().toString();
                 String mes = edtMes.getText().toString();
                 StringBuilder body = new StringBuilder();
@@ -1003,6 +1033,25 @@ public class MainActivity extends AppCompatThemeActivity {
                 finishAffinity();
             }
         });
+
+    }
+
+    private void loadAdsInterRecord(){
+        Admod.getInstance().getInterstitalAds(
+                this,
+                getResources().getString(R.string.inter_welcome),new AdCallback(){
+                    @Override
+                    public void onInterstitialLoad(@Nullable @org.jetbrains.annotations.Nullable InterstitialAd interstitialAd) {
+                        super.onInterstitialLoad(interstitialAd);
+                        mInterstitialAdRecord = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                        super.onAdFailedToLoad(i);
+                    }
+                }
+        );
 
     }
 }

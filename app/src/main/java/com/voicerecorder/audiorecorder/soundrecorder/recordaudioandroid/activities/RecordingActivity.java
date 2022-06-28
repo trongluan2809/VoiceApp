@@ -37,12 +37,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.WindowCallbackWrapper;
 import androidx.multidex.BuildConfig;
 
-import com.amazic.ads.util.AppOpenManager;
+import com.ads.control.ads.Admod;
+import com.ads.control.ads.AppOpenManager;
+import com.ads.control.funtion.AdCallback;
 import com.github.axet.androidlibrary.activities.AppCompatThemeActivity;
 import com.github.axet.androidlibrary.services.FileProvider;
 import com.github.axet.androidlibrary.services.StorageProvider;
@@ -52,6 +55,8 @@ import com.github.axet.androidlibrary.widgets.ErrorDialog;
 import com.github.axet.androidlibrary.widgets.OpenFileDialog;
 import com.github.axet.androidlibrary.widgets.PopupWindowCompat;
 import com.github.axet.audiorecorder.R;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.AudioApplication;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.RecordingStorage;
@@ -95,6 +100,9 @@ public class RecordingActivity extends AppCompatThemeActivity {
     private AudioTrack play; // current play sound track
 
     //
+    InterstitialAd mInterstitialAdDone;
+
+
     EditText edt;
     //
     private TextView title;
@@ -375,6 +383,9 @@ public class RecordingActivity extends AppCompatThemeActivity {
 
         AppOpenManager.getInstance().disableAppResumeWithActivity(RecordingActivity.class);
 
+        //
+        loadAdsInterRecordDone();
+
         pitch = findViewById(R.id.recording_pitch);
         time = findViewById(R.id.recording_time);
         state = findViewById(R.id.recording_state);
@@ -500,8 +511,26 @@ public class RecordingActivity extends AppCompatThemeActivity {
 
     private void showAdsAndFinish(String fileName) {
 
-        startActivity(new Intent(RecordingActivity.this, SuccessActivity.class).putExtra("FILE_NAME", fileName));
-        RecordingActivity.this.finish();
+        if (Common.checkNetWork(this)){
+            Admod.getInstance().forceShowInterstitial(this,
+                    mInterstitialAdDone,
+                    new AdCallback(){
+                        @Override
+                        public void onAdClosed() {
+                            startActivity(new Intent(RecordingActivity.this, SuccessActivity.class).putExtra("FILE_NAME", fileName));
+                            RecordingActivity.this.finish();
+                        }
+
+                        @Override
+                        public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                            startActivity(new Intent(RecordingActivity.this, SuccessActivity.class).putExtra("FILE_NAME", fileName));
+                            RecordingActivity.this.finish();
+                        }
+                    });
+        }else {
+            startActivity(new Intent(RecordingActivity.this, SuccessActivity.class).putExtra("FILE_NAME", fileName));
+            RecordingActivity.this.finish();
+        }
 
     }
 
@@ -975,6 +1004,24 @@ public class RecordingActivity extends AppCompatThemeActivity {
                 headset = null;
             }
         }
+    }
+    private void loadAdsInterRecordDone(){
+        Admod.getInstance().getInterstitalAds(
+                this,
+                getResources().getString(R.string.inter_record_done),new AdCallback(){
+                    @Override
+                    public void onInterstitialLoad(@Nullable @org.jetbrains.annotations.Nullable InterstitialAd interstitialAd) {
+                        super.onInterstitialLoad(interstitialAd);
+                        mInterstitialAdDone = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                        super.onAdFailedToLoad(i);
+                    }
+                }
+        );
+
     }
 
 }

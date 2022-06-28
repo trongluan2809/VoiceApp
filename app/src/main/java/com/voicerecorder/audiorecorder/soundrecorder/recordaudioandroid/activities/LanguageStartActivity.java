@@ -3,21 +3,22 @@ package com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.activit
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.amazic.ads.callback.NativeCallback;
-import com.amazic.ads.util.Admod;
+import com.ads.control.ads.Admod;
+import com.ads.control.funtion.AdCallback;
 import com.github.axet.audiorecorder.R;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
+import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.adapter.LanguageStartAdapter;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.callback.IClickItemLanguage;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.model.LanguageModel;
@@ -36,6 +37,7 @@ public class LanguageStartActivity extends AppCompatActivity {
     List<LanguageModel> listLanguage;
     String codeLang;
     String langDevice = "en";
+    FrameLayout frAds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +52,26 @@ public class LanguageStartActivity extends AppCompatActivity {
         config.locale = locale;
 
 
-
+        frAds = findViewById(R.id.fr_ads);
         recyclerView = findViewById(R.id.recyclerView);
         btn_done = findViewById(R.id.btn_done);
         codeLang = Locale.getDefault().getLanguage();
+
+        //ads native
+        Admod.getInstance().loadNativeAd(this,getString(R.string.native_language),new AdCallback(){
+            @Override
+            public void onUnifiedNativeAdLoaded(@NonNull NativeAd unifiedNativeAd) {
+                NativeAdView adView = (NativeAdView) LayoutInflater.from(LanguageStartActivity.this).inflate(R.layout.layout_native_language, null);
+                frAds.removeAllViews();
+                frAds.addView(adView);
+                Admod.getInstance().populateUnifiedNativeAdView(unifiedNativeAd, adView);
+            }
+        });
+
+        if (!Common.checkNetWork(this)){
+            frAds.removeAllViews();
+        }
+
 
         initData();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);

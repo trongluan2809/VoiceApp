@@ -8,25 +8,22 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
-import com.amazic.ads.callback.InterCallback;
-import com.amazic.ads.callback.NativeCallback;
-import com.amazic.ads.util.Admod;
+import com.ads.control.ads.Admod;
+import com.ads.control.funtion.AdCallback;
 import com.bumptech.glide.Glide;
 import com.github.axet.androidlibrary.activities.AppCompatThemeActivity;
 import com.github.axet.audiorecorder.R;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.nativead.NativeAd;
-import com.google.android.gms.ads.nativead.NativeAdView;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.AudioApplication;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.app.Storage;
@@ -41,7 +38,7 @@ public class SuccessActivity extends AppCompatThemeActivity {
     private ImageView ivLoading;
     private LinearLayout llLoading, llSuccess;
     private Button btnPreview;
-    private InterstitialAd mInterPreview;
+    InterstitialAd mInterstitialAd;
     private TextView tvFile;
 
     @Override
@@ -67,11 +64,11 @@ public class SuccessActivity extends AppCompatThemeActivity {
         btnPreview = findViewById(R.id.iv_preview);
         tvFile = findViewById(R.id.tv_file);
 
-//        loadInterPreview();
+        loadAdsInter();
 
         try {
             String name = getIntent().getStringExtra("FILE_NAME");
-            tvFile.setText(getResources().getString(R.string.savings)+ name);
+            tvFile.setText(getResources().getString(R.string.savings) + name);
         } catch (Exception e) {
             e.printStackTrace();
             tvFile.setText("");
@@ -94,12 +91,30 @@ public class SuccessActivity extends AppCompatThemeActivity {
         }, 4000);
 
         btnPreview.setOnClickListener(v -> {
-            startActivity(new Intent(SuccessActivity.this, MainActivity.class));
-            SuccessActivity.this.finish();
+
+            if (Common.checkNetWork(this)) {
+                Admod.getInstance().forceShowInterstitial(this,
+                        mInterstitialAd,
+                        new AdCallback() {
+                            @Override
+                            public void onAdClosed() {
+                                startActivity(new Intent(SuccessActivity.this, MainActivity.class));
+                                SuccessActivity.this.finish();
+                            }
+
+                            @Override
+                            public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                                startActivity(new Intent(SuccessActivity.this, MainActivity.class));
+                                SuccessActivity.this.finish();
+                            }
+                        });
+            } else {
+                startActivity(new Intent(SuccessActivity.this, MainActivity.class));
+                SuccessActivity.this.finish();
+            }
         });
 
     }
-
 
 
     @Override
@@ -123,6 +138,25 @@ public class SuccessActivity extends AppCompatThemeActivity {
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
+    }
+
+    private void loadAdsInter() {
+        Admod.getInstance().getInterstitalAds(
+                this,
+                getResources().getString(R.string.inter_welcome), new AdCallback() {
+                    @Override
+                    public void onInterstitialLoad(@Nullable @org.jetbrains.annotations.Nullable InterstitialAd interstitialAd) {
+                        super.onInterstitialLoad(interstitialAd);
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                        super.onAdFailedToLoad(i);
+                    }
+                }
+        );
+
     }
 
 }
