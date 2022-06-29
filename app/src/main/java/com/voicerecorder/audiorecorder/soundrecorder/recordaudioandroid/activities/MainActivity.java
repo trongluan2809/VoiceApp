@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatThemeActivity {
 
 
         //
+        Admod.getInstance().loadBanner(this,getString(R.string.banner_all));
         loadAdsInterRecord();
 
         shared = PreferenceManager.getDefaultSharedPreferences(this);

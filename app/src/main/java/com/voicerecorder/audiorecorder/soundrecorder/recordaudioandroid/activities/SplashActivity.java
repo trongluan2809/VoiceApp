@@ -96,12 +96,31 @@ public class SplashActivity extends AppCompatActivity {
             }
 
         } else {
-            new Handler().postDelayed(new Runnable() {
+            if (Common.checkNetWork(this)) {
+                Admod.getInstance().loadSplashInterstitalAds(
+                        this,
+                        getString(R.string.inter_splash),
+                        2500,
+                        5000,
+                        new AdCallback() {
+                            @Override
+                            public void onAdClosed() {
+                                startActivity();
+                            }
+
+                            @Override
+                            public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
+                                onAdClosed();
+                            }
+                        });
+            }else {
+                new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     startActivity();
                 }
             }, 2000);
+            }
 
 
         }

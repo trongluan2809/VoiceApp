@@ -21,12 +21,27 @@
             android:layout_centerHorizontal="true"
             android:padding="2dp" />
 
+
+        <LinearLayout
+            android:id="@+id/ll_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space_left"
+            android:layout_marginTop="5dp">
+
+            <include
+                android:id="@+id/banner"
+                layout="@layout/layout_banner_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/nav_bottom"
-            android:layout_below="@id/space_left"
+            android:layout_below="@id/ll_banner"
             android:clipToPadding="false"
             android:paddingTop="16dp" />
 

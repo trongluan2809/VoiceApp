@@ -1,33 +1,23 @@
 package com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.FileProvider;
-
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.amazic.ads.callback.NativeCallback;
-import com.amazic.ads.util.Admod;
-import com.bumptech.glide.Glide;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.github.axet.audiorecorder.R;
-import com.google.android.gms.ads.nativead.NativeAd;
-import com.google.android.gms.ads.nativead.NativeAdView;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.callback.CustomClickListener;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.utils.SystemUtil;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
