@@ -18,7 +18,6 @@ import com.ads.control.funtion.AdCallback;
 import com.github.axet.audiorecorder.R;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.Common;
 import com.voicerecorder.audiorecorder.soundrecorder.recordaudioandroid.utils.SystemUtil;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -37,26 +36,8 @@ public class WelcomeActivity extends AppCompatActivity {
 
         btnNext = findViewById(R.id.btnNext);
         btnNext.setOnClickListener(v -> {
-            if (Common.checkNetWork(this)){
-                Admod.getInstance().forceShowInterstitial(this,
-                        mInterstitialAd,
-                        new AdCallback(){
-                            @Override
-                            public void onAdClosed() {
-                                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-                                finish();
-                            }
-
-                            @Override
-                            public void onAdFailedToLoad(@Nullable @org.jetbrains.annotations.Nullable LoadAdError i) {
-                                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-                                finish();
-                            }
-                        });
-            }else {
-                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-                finish();
-            }
+            startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+            finish();
         });
     }
 
@@ -71,10 +52,10 @@ public class WelcomeActivity extends AppCompatActivity {
         }
     }
 
-    private void loadAdsInterWelcome(){
+    private void loadAdsInterWelcome() {
         Admod.getInstance().getInterstitalAds(
                 this,
-                getResources().getString(R.string.inter_welcome),new AdCallback(){
+                getResources().getString(R.string.inter_welcome), new AdCallback() {
                     @Override
                     public void onInterstitialLoad(@Nullable @org.jetbrains.annotations.Nullable InterstitialAd interstitialAd) {
                         super.onInterstitialLoad(interstitialAd);

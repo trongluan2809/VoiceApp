@@ -33,16 +33,16 @@
             app:elevation="0dp"
             app:maxImageSize="18dp"
             tools:ignore="ContentDescription"
-            android:backgroundTint="@color/color_DD8A31"/>
+            android:backgroundTint="#FC4A1A"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
-            app:tabIndicatorHeight="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/fabNext"
             android:layout_toEndOf="@id/fabPrev"
             app:tabBackground="@drawable/tab_selector"
+            app:tabIndicatorHeight="0dp"
             app:tabMaxWidth="13dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -52,7 +52,7 @@
             android:layout_alignParentEnd="true"
             android:layout_gravity="end"
             android:layout_marginEnd="@dimen/intro_fab_margin"
-            android:backgroundTint="@color/color_DD8A31"
+            android:backgroundTint="#FC4A1A"
             android:src="@drawable/ic_next"
             app:elevation="0dp"
             app:maxImageSize="18dp"

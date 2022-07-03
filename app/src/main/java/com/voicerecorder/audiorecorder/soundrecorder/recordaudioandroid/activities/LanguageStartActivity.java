@@ -45,8 +45,8 @@ public class LanguageStartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_language_start_actity);
         Configuration config = new Configuration();
         Locale locale = Locale.getDefault();
-         langDevice = locale.getLanguage();
-         this.getResources().updateConfiguration(config, this.getResources().getDisplayMetrics());
+        langDevice = locale.getLanguage();
+        this.getResources().updateConfiguration(config, this.getResources().getDisplayMetrics());
 
         Locale.setDefault(locale);
         config.locale = locale;
@@ -58,7 +58,7 @@ public class LanguageStartActivity extends AppCompatActivity {
         codeLang = Locale.getDefault().getLanguage();
 
         //ads native
-        Admod.getInstance().loadNativeAd(this,getString(R.string.native_language),new AdCallback(){
+        Admod.getInstance().loadNativeAd(this, getString(R.string.native_language), new AdCallback() {
             @Override
             public void onUnifiedNativeAdLoaded(@NonNull NativeAd unifiedNativeAd) {
                 NativeAdView adView = (NativeAdView) LayoutInflater.from(LanguageStartActivity.this).inflate(R.layout.layout_native_language, null);
@@ -68,7 +68,7 @@ public class LanguageStartActivity extends AppCompatActivity {
             }
         });
 
-        if (!Common.checkNetWork(this)){
+        if (!Common.checkNetWork(this)) {
             frAds.removeAllViews();
         }
 
@@ -80,11 +80,11 @@ public class LanguageStartActivity extends AppCompatActivity {
             public void onClickItemLanguage(String code) {
                 codeLang = code;
             }
-        },this);
+        }, this);
 
 
-        String[] langDefault = { "es", "fr", "pt", "de","hi","it"};
-        if(!Arrays.asList(langDefault).contains(langDevice)) langDevice = "en";
+        String[] langDefault = {"es", "fr", "pt", "de", "hi", "it"};
+        if (!Arrays.asList(langDefault).contains(langDevice)) langDevice = "en";
 
         languageAdapter.setCheck(langDevice);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -94,36 +94,37 @@ public class LanguageStartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharePrefUtils.increaseCountFirstHelp(LanguageStartActivity.this);
-                SystemUtil.saveLocale(getBaseContext(),codeLang);
+                SystemUtil.saveLocale(getBaseContext(), codeLang);
                 startActivity(new Intent(LanguageStartActivity.this, AppIntro.class).putExtra("INTRO_FROM_SPLASH", true));
                 finish();
             }
         });
 
     }
+
     private void initData() {
-        int position =0;
+        int position = 0;
         boolean isLangDefault = false;
         listLanguage = new ArrayList<>();
-        listLanguage.add(new LanguageModel("English","en"));
-        listLanguage.add(new LanguageModel("Spanish","es"));
-        listLanguage.add(new LanguageModel("French","fr"));
-        listLanguage.add(new LanguageModel("Portuguese","pt"));
-        listLanguage.add(new LanguageModel("Hindi","hi"));
-        listLanguage.add(new LanguageModel("German","de"));
-        listLanguage.add(new LanguageModel("Italian","it"));
+        listLanguage.add(new LanguageModel("English", "en"));
+        listLanguage.add(new LanguageModel("Spanish", "es"));
+        listLanguage.add(new LanguageModel("French", "fr"));
+        listLanguage.add(new LanguageModel("Portuguese", "pt"));
+        listLanguage.add(new LanguageModel("Hindi", "hi"));
+        listLanguage.add(new LanguageModel("German", "de"));
+        listLanguage.add(new LanguageModel("Italian", "it"));
 
-        for(LanguageModel languageModel:listLanguage){
-            if(languageModel.getCode().equals(langDevice)){
+        for (LanguageModel languageModel : listLanguage) {
+            if (languageModel.getCode().equals(langDevice)) {
                 isLangDefault = true;
-               break;
+                break;
             }
             position++;
         }
-        if(position>0&&isLangDefault){
+        if (position > 0 && isLangDefault) {
             LanguageModel languageModel = listLanguage.get(position);
             listLanguage.remove(position);
-            listLanguage.add(0,languageModel);
+            listLanguage.add(0, languageModel);
         }
     }
 }
